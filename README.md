@@ -10,7 +10,7 @@
 ##
 
 
-# 🦹‍♂️ La Legión del Mal - desde remoto y local 
+# 🦹‍♂️ La Legión del Mal - desde remoto y local - vs code 
 
 
 > _"El mundo no se conquista con fuerza bruta, se conquista con un buen plan y control de versiones."_
