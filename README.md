@@ -11,7 +11,9 @@
 
 
 # 🦹‍♂️ La Legión del Mal - desde remoto y local - vs code  **egzz** 
-### --dese local -- probando pull request 
+
+### --dese local - actualizacion 2
+
 
 
 > _"El mundo no se conquista con fuerza bruta, se conquista con un buen plan y control de versiones."_
