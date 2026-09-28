@@ -2,7 +2,7 @@
 name: Reporte De Bug
 about: Crea un reporte para ayudarnos a mejorar
 title: 'Bug :'
-labels: ''
+labels: Necesitamos Ayuda, Nueva Etiqueta
 assignees: EduardoGarciaZavala
 type: Bug
 
