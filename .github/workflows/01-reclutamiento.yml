@@ -7,3 +7,15 @@ jobs:
         steps:
             - name: El agente se presenta
               run: echo "soy lex luthor y vengo a reclutar agentes para la liga de la justicia"
+
+            - name: Reporte de identidad
+              run: |
+               echo "mi identidad es secreta y no puedo revelar mi nombre"
+               echo "mi identidad secreta es lex luthor y vengo a reclutar agentes para la liga de la justicia"
+               echo "======================================"
+               echo ""
+               echo "Nombre clave: ${{ github.actor }}"
+               echo "contexto: ${{ github.event_name }}"
+               echo "repositorio: ${{ github.repository }}"
+               echo "rama: ${{ github.ref }}"
+               echo "======================================"
