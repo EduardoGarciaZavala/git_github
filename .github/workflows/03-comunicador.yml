@@ -46,10 +46,25 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: instalar dependencias
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cowsay
+
       - name: Transmitiendo mensaje
         run: |
-          echo "inputs"
-          echo "Villano: ${{ github.event.inputs.villano }}"
-          echo "Mensaje: ${{ github.event.inputs.mensaje }}"
-          echo "Prioridad: ${{ github.event.inputs.prioridad }}"  
+          echo ""
+          echo "╔══════════════════════════════════════════════════════════════╗"
+          echo "║              📡  COMUNICADO DE LA LEGIÓN  📡               ║"
+          echo "╠══════════════════════════════════════════════════════════════╣"
+          printf "║  🦹  %-54s║\n" "Villano:   ${{ github.event.inputs.villano }}"
+          printf "║  💬  %-54s║\n" "Mensaje:   ${{ github.event.inputs.mensaje }}"
+          printf "║  🚨  %-54s║\n" "Prioridad: ${{ github.event.inputs.prioridad }}"
+          echo "╠══════════════════════════════════════════════════════════════╣"
+          echo "║          ✅  Mensaje transmitido al consejo  ✅             ║"
+          echo "╚══════════════════════════════════════════════════════════════╝"
+          echo ""
+          cowsay -f tux "Villano: ${{ github.event.inputs.villano }}\nMensaje: ${{ github.event.inputs.mensaje }}\nPrioridad: ${{ github.event.inputs.prioridad }}"
+          echo ""
+          echo "fecha y hora de transmisión: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
