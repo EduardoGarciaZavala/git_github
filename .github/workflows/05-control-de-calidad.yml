@@ -19,3 +19,8 @@ jobs:
             echo "El informe diario NO está presente en el README."
             exit 1
           fi
+
+      - name: Ejecutar validación de planes
+        run: |
+          chmod +x scripts/validar-planes.sh
+          ./scripts/validar-planes.sh
