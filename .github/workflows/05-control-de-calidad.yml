@@ -1,0 +1,21 @@
+name: control de calidad
+on:
+    push:
+        branches: [ "main" ] 
+    pull_request:
+        branches: [ "main" ]
+jobs:
+  control-de-calidad:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Brainiac accede a la base
+        uses: actions/checkout@v4
+
+      - name: Verificar el estado del README
+        run: |
+          if grep -q "Informe diario de Brainiac" README.md; then
+            echo "El informe diario está presente en el README."
+          else
+            echo "El informe diario NO está presente en el README."
+            exit 1
+          fi
