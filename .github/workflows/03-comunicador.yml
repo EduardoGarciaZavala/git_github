@@ -7,7 +7,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      mensaje:
+      villano:
         description: 'que villano envia el mensaje?'
         required: true
         type: choice
@@ -22,6 +22,20 @@ on:
           - "Cheetah"
           - "Bane"
           - "Ra's al Ghul"
+          
+      mensaje:
+        description: 'Mensaje para el consejo de la justicia'
+        required: true
+        default: 'la mision ha sido cumplida'
+
+      prioridad:
+        description: 'que prioridad tiene el mensaje?'
+        required: true
+        type: choice
+        options:
+            - "alta"
+            - "media"
+            - "baja"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
