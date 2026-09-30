@@ -1,0 +1,11 @@
+name : Acceso a la fortaleza de la soledad
+on: push
+jobs:
+    acceso-a-la-fortaleza:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: el agente se presenta
+              run: |
+                echo "agente ${{ github.actor }} solicita acceso a la fortaleza de la soledad"
+                
