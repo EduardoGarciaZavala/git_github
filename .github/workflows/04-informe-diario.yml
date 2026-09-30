@@ -69,10 +69,10 @@ jobs:
           _"Los datos no mienten. Los seres orgánicos sí."_
           EOF
 
-      - name: Brainiac archiva el informe
-        run: |
-          git config user.name "Brainiac"
-          git config user.email "brainiac@legion-del-mal.dev"
-          git add README.md
-          git commit -m "📊 Informe diario de dominación - $(date -u +%Y-%m-%d)"
-          git push
+    #   - name: Brainiac archiva el informe
+    #     run: |
+    #       git config user.name "Brainiac"
+    #       git config user.email "brainiac@legion-del-mal.dev"
+    #       git add README.md
+    #       git commit -m "📊 Informe diario de dominación - $(date -u +%Y-%m-%d)"
+    #       git push
