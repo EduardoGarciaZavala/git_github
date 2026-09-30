@@ -22,7 +22,7 @@ on:
           - "Cheetah"
           - "Bane"
           - "Ra's al Ghul"
-          
+
       mensaje:
         description: 'Mensaje para el consejo de la justicia'
         required: true
@@ -46,6 +46,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Transmitiendo mensaje
+        run: |
+          echo "inputs"
+          echo "Villano: ${{ github.event.inputs.villano }}"
+          echo "Mensaje: ${{ github.event.inputs.mensaje }}"
+          echo "Prioridad: ${{ github.event.inputs.prioridad }}"  
 
